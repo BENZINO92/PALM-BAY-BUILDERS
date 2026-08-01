@@ -5,7 +5,8 @@ EMAIL_FROM = "admin@bjbacquisitiongroup.com"
 EMAIL_ALERTS_TO = ["admin@bjbacquisitiongroup.com"]
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-GMAIL_APP_PASSWORD = "YOUR_GMAIL_APP_PASSWORD_HERE"
+GMAIL_APP_PASSWORD = import os
+GMAIL_APP_PASSWORD = os.getenv('GMAIL_PASSWORD', 'YOUR_GMAIL_APP_PASSWORD_HERE')
 
 # Brevard BASS Portal - DEVELOPMENT SECTION
 BASS_URL = "https://acaweb.brevardcounty.us/citizenaccess/"
